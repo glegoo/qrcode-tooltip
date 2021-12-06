@@ -1,0 +1,86 @@
+<!--
+ * @Author: Cheng Wei
+ * @Date: 2021-12-06 16:48:05
+ * @LastEditTime: 2021-12-06 17:46:13
+ * @LastEditors: Cheng Wei
+ * @Description: 
+ * @FilePath: \qrcode-tooltip\index.html
+ * @GitHub: https://github.com/glegoo
+-->
+<html>
+  <head> </head>
+  <body>
+    <div class="side-box">
+      <div class="download-icon">
+        <div class="icon">
+          <div class="download-tooltip">
+            <div class="qr-code">
+              <img src="./img/gzh.jpg" />
+              公众号二维码
+            </div>
+            <div>
+              <img src="./img/mp.jpg" />
+              小程序二维码
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <style type="text/css">
+    .side-box {
+      width: 48px;
+      height: 55px;
+      position: fixed;
+      right: 3.125%;
+      bottom: 40px;
+      transform: translateX(50%);
+      border-radius: 4px;
+      box-shadow: 0 2px 6px 0 hsla(0, 0%, 82.7%, 0.5);
+      background-color: hsla(0, 0%, 100%, 0.9);
+      z-index: 9999;
+    }
+
+    .download-icon {
+      width: 100%;
+      height: 54px;
+      border-bottom: 1px solid hsla(0, 0%, 82.7%, 0.5);
+      border-radius: 4px;
+    }
+    .download-icon .icon {
+      width: 100%;
+      height: 100%;
+      background: url(./img/side-download.svg) no-repeat 50%;
+    }
+    .download-icon:hover {
+      background-color: #000;
+    }
+    .download-icon:hover .download-tooltip {
+      visibility: visible;
+    }
+    .download-icon:hover .icon {
+      background: url(./img/side-download-hover.svg) no-repeat 50%;
+    }
+    .download-tooltip {
+      visibility: hidden;
+      background-color: #fff;
+      box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.04);
+      color: #606060;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      display: flex;
+
+      /* 定位 */
+      position: absolute;
+      right: 68px;
+      bottom: 0;
+      z-index: 1;
+    }
+    .download-tooltip img {
+      width: 160px;
+      height: 160px;
+      margin: 5px;
+    }
+  </style>
+</html>
